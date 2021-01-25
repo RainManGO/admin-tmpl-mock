@@ -60,6 +60,7 @@ pipeline {
                     // sh 'npm config set registry https://registry.npm.taobao.org'
                     sh 'npm install typescript -g --registry=https://registry.npm.taobao.org'
                     sh 'npm install --registry=https://registry.npm.taobao.org'
+                    sh 'rm -rf dist  || true'
                     sh "${NPM_RUN_BUILD_CMD}"
                 }
             }                
