@@ -3,7 +3,7 @@
  * @Autor: ZY
  * @Date: 2020-11-11 13:59:28
  * @LastEditors: ZY
- * @LastEditTime: 2020-12-29 09:04:03
+ * @LastEditTime: 2021-01-25 16:24:22
  */
 import log from '../utils/logger'
 import { MiddleWare } from '../type'
@@ -23,11 +23,17 @@ export const ResultHandler: MiddleWare = () => async (ctx, next) => {
   try {
     const data:any = await next();
     r.code = 0;
-    r.msg = 'success'
-    r.data = data;
+    console.log(ctx.request.path);
+    if (ctx.request.path === '/ping') {
+      r.msg = 'pong'
+
+    }else{
+      r.msg = 'success'
+      r.data = data;
+    }
+ 
   } catch (err) {
     log.error(err);
-    log.error('xxx'+err.statusCode);
     r.code = err.statusCode
     switch (err.statusCode) {
       case 102:
