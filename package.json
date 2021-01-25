@@ -1,14 +1,11 @@
 {
-  "name": "vue3-typescript-admin-template",
+  "name": "admin-tmpl-mock",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://RainManGO.github.io/vue3-composition-admin",
   "scripts": {
     "start": "cd mock && ts-node-dev mock.ts",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint",
-    "mock": "cd mock && ts-node-dev mock.ts"
+    "build": "tsc"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -32,20 +29,16 @@
     "sortablejs": "^1.13.0"
   },
   "devDependencies": {
-    "@types/clipboard": "^2.0.1",
     "@types/faker": "^5.1.5",
     "@types/file-saver": "^2.0.1",
-    "@types/js-cookie": "^2.2.6",
     "@types/koa": "^2.11.6",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-router": "^7.4.1",
     "@types/koa2-cors": "^2.0.1",
-    "@types/lodash": "^4.14.167",
     "@types/node": "^14.14.11",
     "@types/sortablejs": "^1.10.6",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "concurrently": "^5.3.0",
     "cross-env": "^7.0.3",
     "ts-node-dev": "^1.0.0",
     "typescript": "~3.9.3"

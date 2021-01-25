@@ -21,11 +21,9 @@
     "sourceMap": true,
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "mock/**/*"
   ],
   "exclude": [
-    "node_modules",
-    "dist"
+    "mock/dist"
   ]
 }

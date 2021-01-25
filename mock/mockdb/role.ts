@@ -3,13 +3,19 @@
  * @Author: ZY
  * @Date: 2021-01-12 15:25:09
  * @LastEditors: ZY
- * @LastEditTime: 2021-01-12 16:18:19
+ * @LastEditTime: 2021-01-25 14:23:32
  */
 
-import { RoleBean } from "controller/type";
 import { asyncRoutes, constantRoutes } from './routes'
 
 export const routes = [...constantRoutes, ...asyncRoutes]
+
+export interface RoleBean {
+  key: string
+  name: string
+  description: string
+  routes: any
+}
 
 const roles: RoleBean[] = [
     {

@@ -1,13 +1,24 @@
-import { UserBean } from "controller/type";
-
 /*
  * @Description: 所有的用户列表
  * @Author: ZY
  * @Date: 2020-12-28 14:58:13
  * @LastEditors: ZY
- * @LastEditTime: 2020-12-28 15:16:58
+ * @LastEditTime: 2021-01-25 14:22:55
  */
 import faker from 'faker'
+
+
+export interface UserBean {
+  id: number
+  username: string
+  password: string
+  name: string
+  email: string
+  phone: string
+  avatar: string
+  introduction: string
+  roles: string[]
+}
 
 const userList: UserBean[] = [
     {
