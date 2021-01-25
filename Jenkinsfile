@@ -67,8 +67,7 @@ pipeline {
         stage('DockerBuild') {
             steps {
                 script{
-                    sh "rm -rf dist"
-                    devops.docker(env.NAME,dockerfile:"docker/${DOCKERFILE_NAME}",context:"docker").build().push()
+                    devops.docker(env.NAME,dockerfile:"${DOCKERFILE_NAME}",context:".").build().push()
                 }
             }
         }
