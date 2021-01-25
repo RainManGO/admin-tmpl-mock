@@ -5,7 +5,7 @@ pipeline {
     environment {  // https://stackoverflow.com/questions/53541489/updating-environment-global-variable-in-jenkins-pipeline-from-the-stage-level
         NAME="admin-tmpl-mock"
         NAMESPACE="oppc-rcyj-web"
-        SERVER_PORT="80"
+        SERVER_PORT="3300"
     }
 
     options {

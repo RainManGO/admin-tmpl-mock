@@ -1,8 +1,7 @@
 FROM node:14.15.0-alpine3.11
 LABEL maintainer lijuzhang<lijuzhang@rlzbcy.com>
 
-ARG PROJECT_DIR="dist"
-
 WORKDIR /u01/app
-COPY ${PROJECT_DIR} .
-CMD ["node","mock.js"]
+COPY . .
+# 该项目仅需要dist和node_modules
+CMD ["node","dist/mock.js"]
